@@ -1,0 +1,52 @@
+$primary-color:black;
+$secondary-color:rgb(4, 175, 118);
+$third-color:white;
+$nav-height:10vh;
+$sidebar-width:70px;
+
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+@mixin transition-ease{
+    transition:all 0.5s ease-in-out;
+}
+@function set-text-color($color){
+    @if(lightness($color)>40%){
+        @return black;
+    }
+    @else {
+        @return white;
+    }
+    
+}
+
+// @mixin mediaSm {
+//     @media screen and (m-width:500px){
+//         @content;
+//     }
+    
+// }
+
+
+@mixin mediaMd {
+    @media screen and (min-width:570px){
+        @content;
+    }
+    
+}
+@mixin mediaLg {
+    @media screen and (min-width:760px){
+        @content;
+    }
+    
+}
+@mixin mediaXl {
+    @media screen and (min-width:1171px){
+        @content;
+    }
+    
+}

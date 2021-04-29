@@ -1,0 +1,366 @@
+// tablets and mini laptops
+@include mediaMd{
+    .home{
+        
+    }
+    .wrapper{
+        .pot-items{
+            
+            grid-template-columns: repeat(2,1fr);
+        }
+        // display:flex;
+        // flex-direction:column;
+        // justify-content:center;
+        // align-items:center;
+        .contact{
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+        .potfolio{
+            grid-template-columns: repeat(2,1fr);
+        }
+         .Experiences, .Educations{
+             display:grid;
+             grid-template-columns: repeat(2,1fr);
+             grid-gap:30px;
+             .experience{
+                margin:0;
+            }
+            .education{
+                margin:0;
+            }
+        }
+        .Skills{
+            width:100%;
+            .skills1{
+                grid-template-columns: repeat(2,1fr);
+                display:grid;
+                grid-gap:20px;
+                .skill1{
+                    margin:0;
+
+                }
+            }
+        }
+        .works{
+            grid-template-columns: repeat(2,1fr);
+            display:grid;
+            grid-gap:20px;
+            .work{
+                border-right:none;
+                border-left:1px solid $secondary-color;
+                justify-content:flex-start;
+                h2{
+                text-align:left;
+                }
+                  &:nth-child(even){
+                      border-right:0px none;
+                       border-left:1px solid $secondary-color;
+                justify-content:flex-start;
+                h2{
+                text-align:left;
+                }
+                  }
+            }
+        }
+        .blogs{
+             grid-template-columns: repeat(4,1fr);
+            grid-gap:25px;
+            
+        }
+    }
+    .side-bar{
+        
+    }
+    .abo-ut{
+      
+        .about{
+            padding:0px 20px;
+            width:100%;
+            .owner-info{
+                
+                .info{
+                    padding-top:30px;
+                    display:grid;
+                    grid-template-columns: repeat(3,1fr);
+                    grid-gap:25px;
+                    grid-template-areas: 
+                    'userimage userinfo userinfo';
+                   
+                    .about-info{
+                        grid-area: userinfo;
+                        text-align: left;
+                        justify-content:center;
+                    }
+                    .user-image{
+                        grid-area: userimage;
+                        width:160px;
+                        height:160px;
+
+                    }
+                }
+                .more-info{
+                    width:100%;
+                    // display:grid;
+                    grid-template-columns: repeat(2,1fr);
+                    grid-gap: 20px;
+                  
+                }
+            }
+        }
+        .interest{
+            padding:0 20px;
+            .int-items{
+                display:grid;
+                grid-template-columns:  1fr 1fr;
+                grid-gap: 15px;
+
+                .items{
+                    margin-bottom:0;
+                }
+            }
+        }
+        .servi-ces{
+            .services{
+                display:grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-gap:20px;
+                .service{
+                    margin-bottom:0;
+                }
+            }
+        }
+    }
+
+}
+
+//desktop and laptops
+@include mediaLg{
+    .wrapper {
+        top:0;
+        height:100vh;
+        .pot-items{
+            
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+   
+    .home{
+    height:100vh;
+    top:0;
+    width: calc(100% -  80px);
+    left: $sidebar-width
+}
+
+    .nav-bar{
+        display: none;
+    }
+     .wrapper{
+        // .potfolio{
+        //     grid-template-columns: repeat(3,1fr);
+        // }
+         .contact{
+            width: 70%;
+
+        }
+         .Experiences, .Educations{
+             display:grid;
+             grid-template-columns: repeat(2,1fr);
+             grid-gap:30px;
+             .experience{
+                 margin:0;
+            }
+            .education{
+                margin:0;
+            }
+        }
+        .Skills{
+            .skills1{
+                grid-template-columns: repeat(3,1fr);
+                display:grid;
+                grid-gap:30px;
+                .skill1{
+                    margin:0;
+
+                }
+            }
+        }
+        .works{
+            grid-template-columns: repeat(2,1fr);
+            display:grid;
+            grid-gap:20px;
+            .work{
+                
+            }
+        }
+    }
+    .wrapper{
+        width: calc(100% - 100px);
+        left:100px;
+    }
+    .wrapper{
+        .potfolio{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    .side-bar{
+        width:100px;
+    }
+    .abo-ut{
+        
+        .about{
+            padding:0px 20px;
+            .owner-info{
+                
+                .info{
+                  
+                   
+                    .about-info{
+                       
+                    }
+                    .user-image{
+                        width:180px;
+                        height:180px;
+
+                    }
+                }
+                .more-info{
+                    // display:grid;
+                    grid-template-columns: repeat(3,1fr);
+                      align-items:center;
+                    justify-items:center;   
+                    grid-gap: 20px;
+                }
+            }
+        }
+        .interest{
+            padding:0 20px;
+            .int-items{
+                display:grid;
+                grid-template-columns:  repeat(3,1fr);
+                grid-gap: 15px;
+
+               .item{
+                   margin-bottom:0;
+               }
+            }
+        }
+        .servi-ces{
+            .services{
+                grid-template-columns: repeat(3,1fr);
+                .service{
+                }
+            }
+        }
+    }
+    .nav-bar{
+        .menu-bar{
+            display:none;
+            .hamburger{
+
+            }
+        }
+    }
+    .side-bar{
+        left:0;
+        width:100px;
+    }
+
+}
+
+//wide screens
+@include mediaXl{
+     .wrapper{
+          .pot-items{
+              grid-template-columns: repeat(4,1fr);
+          }
+         .Experiences, .Educations{
+             display:grid;
+             grid-template-columns: repeat(3,1fr);
+             grid-gap:30px;
+             .experience{
+                 margin:0;
+            }
+            .education{
+                margin:0;
+            }
+        }
+        .Skills{
+            .skills1{
+                grid-template-columns: repeat(3,1fr);
+                display:grid;
+                grid-gap:20px;
+                .skill1{
+                    margin:0;
+
+                }
+            }
+        }
+        .works{
+            grid-template-columns: repeat(3,1fr);
+            display:grid;
+            grid-gap:20px;
+            .work{
+                &:nth-child(even){
+                    border-left:1px solid $secondary-color;
+                    justify-content:flex-start;
+                    h2{
+                      text-align:left;
+                    }
+                }
+                
+            }
+          
+        }
+    }
+      .wrapper{
+        .potfolio{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    .abo-ut{
+        .about{
+            padding:0px 40px;
+            .owner-info{
+                
+                .info{
+                    
+                    .about-info{
+                    }
+                    .user-image{
+                        width:210px;
+                        height:210px;
+
+                    }
+                }
+                .more-info{
+                    // display:flex;
+                    flex-direction: row;
+                    // grid-template-columns: repeat(4,1fr);
+                    // grid-gap: 20px;
+                    align-items:center;
+                    justify-content:space-around;
+                }
+            }
+        }
+        .interest{
+            padding:0 20px;
+            .int-items{
+                display:grid;
+                grid-template-columns:  repeat(4,1fr);
+                grid-gap: 15px;
+
+               
+            }
+        }
+        .servi-ces{
+            .services{
+                grid-template-columns: repeat(4,1fr);
+                .service{
+                }
+            }
+        }
+    }
+}

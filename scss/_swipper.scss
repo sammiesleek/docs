@@ -1,0 +1,37 @@
+
+       
+            .user{
+                background:$primary-color;
+                margin-bottom:20px;
+                border-radius:10px;
+                display:flex;
+                width: calc(100vw - 40px);
+                flex-direction:column;
+                padding:30px 20px;
+                
+                p{
+                    color:$third-color;
+                    text-align:justify;
+                }
+                .label{
+                    display:flex;
+                    flex:1;
+                    align-items:center;
+                    margin-bottom:18px;
+                    img{
+                        border-radius:50%;
+                        width:100px;
+                        margin-right:10px;
+                    }
+                    h4{
+                        font-size:18px;
+                        color:$third-color;
+                        span{
+                            color:$secondary-color;
+                            font-size:11px;
+                        }
+                    }
+                }
+            }
+    
+    

@@ -1,0 +1,73 @@
+.blogs{
+    .blog{
+        margin-top:40px;
+        display:flex;
+        flex-direction:column;
+        margin-bottom:40px;
+        background:$primary-color;
+        border-radius:10px;
+        .img-box{
+            width:100%;
+            height:430px;
+            background:rgba(224, 224, 13,0.6);
+            border-radius:10px 10px 0px 0px;
+            background-image:url(../img/user.jpg);
+            background-position:center;
+            background-size:cover;
+            background-repeat:no-repeat;
+            img{
+                width:100%;
+                height:100%;
+                border-radius:10px 10px 0px 0px;
+            }
+        }
+        .txt-area{
+            padding: 20px 0px;
+            h2{
+                text-align:center;
+                color:$third-color;
+                margin:10px 0px;
+            }
+            p{
+                 text-align:center;
+                margin:10px 0px;
+                color:$third-color;
+            }
+            &::after{
+                content:'';
+                width:100%;
+                height:5px;
+                display:block;
+                background:lighten($primary-color,4%);
+                margin-top:10px;
+            }
+        }
+        .more{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin:5px 0px 30px 0px;
+            a{
+                text-decoration:none;
+                position:relative;
+                text-align:center;
+                background: lighten($primary-color,4%);
+                padding:5px 10px;
+                color:$third-color;
+                border-radius:5px;
+                border-bottom:2px solid $secondary-color;
+                 border-right:2px solid lighten($primary-color,4%);
+                @include transition-ease;
+                display:flex;
+                   
+                &:hover{
+                     border-bottom:2px solid lighten($primary-color,4%);
+                     border-right:2px solid $secondary-color;
+
+                }
+              
+            }
+        }
+    }
+}
+

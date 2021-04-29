@@ -1,0 +1,93 @@
+.side-bar{
+    position:fixed;
+    height: 100vh;
+    width:$sidebar-width;
+    background:lighten($primary-color,0%);
+    left:-100px;
+    z-index:200;
+    // opacity: 0.4;
+    @include transition-ease;
+    &.open{
+        left:0;
+    }
+    .profile{
+        margin-top:20px;
+        height:$nav-height;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        img{
+            width:60px;
+            border-radius:50%;
+        }
+    }
+    
+    .logo-box{
+        height:17%;
+        display:flex;
+        width:100%;
+        justify-content:center;
+        align-items:center;
+        .fa{
+            color:$third-color;
+            font-size:40px;
+        }
+    }
+    .nav-items{
+        height:80%;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        margin-top:20px;
+        .nav-links{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            &.active{
+                background:lighten($primary-color,6.5%);
+            }
+            a{
+                display:inline;
+                text-decoration:none;
+                outline:0;
+                &:focus{
+                    outline: 0;
+                    border:none;
+                }
+            }
+           
+            .fa{
+                color:$third-color;
+                padding:20px 0;
+                text-align:center;
+                font-size:27px;
+                @include transition-ease;
+                 .label{
+                    position:absolute;
+                    margin-left:-14px;
+                    border-radius:5px;
+                    margin-top:-60px;
+                    background:$primary-color;
+                    opacity:0;
+                    visibility:hidden;
+                    @include transition-ease;
+                    h4{
+                        padding:5px 10px;
+                        font-size:14px;
+                        color:$third-color;
+                    }
+                }
+                &:hover{
+                    color:$secondary-color;
+                    .label{
+                       opacity:1;
+                       visibility:visible;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}

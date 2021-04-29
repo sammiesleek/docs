@@ -1,0 +1,71 @@
+.home{
+    position: relative;
+    height:90vh;
+    
+    top: $nav-height;
+    overflow:hidden;
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    background:  linear-gradient(90deg, rgba(0, 0, 0, 0.96) , rgba(0, 0, 0, 0.87) ), url(../img/we.jpg) ;
+    filter: blur(10%);
+    // background:url(../img/we.jpg), linear-gradient(to bottom, black , red);
+    
+    align-items: center;
+    background-position:center;
+    background-size:cover;
+    // background:$third-color;
+    &:after{
+        content:'';
+        display:none;
+        height:5px;
+        background:$primary_color;
+        width:70%;
+
+    }
+    .profile{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        img{
+            border-radius:50%;
+            margin-bottom: 1rem;
+        }
+        h2{
+            font-size: 2rem;
+            color:$secondary_color;
+            margin-bottom: 0.8rem;
+        }
+        h5{
+            font-size:0.9rem;
+            color:darken($secondary_color,5%);
+            margin-bottom:1.2rem;
+        }
+        .connects{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+                font-size:1.1rem;
+                margin: 0px  .2rem ;
+                padding:5px;
+                background:transparent;
+                border-radius:50%;
+                .fab{
+                    color: $secondary_color;
+
+                }
+
+            }
+        }
+        a{
+            padding: 0.7rem 1.5rem;
+            background: $secondary_color;
+            color:$third-color;
+            margin-top: 3rem;
+            border-radius: 5px;
+
+        }
+    }
+}
